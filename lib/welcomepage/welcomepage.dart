@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:moviesapp/pages/loginpage/loginpage.dart';
+import 'package:moviesapp/pages/registerpage/registerpage.dart';
 // ignore_for_file: prefer_const_constructors
 
 
@@ -44,11 +46,19 @@ class _WelcomePageState extends State<WelcomePage> {
                   SizedBox(
                     width: 20,
                   ),
-                  Text(
-                    "Iniciar Sesión",
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 20,
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => Loginpage()));
+                    },
+                    child: Text(
+                      "Iniciar Sesión",
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 20,
+                      ),
                     ),
                   ),
                 ],
